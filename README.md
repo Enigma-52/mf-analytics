@@ -46,8 +46,6 @@ src/
 
 **application/** — Pure business logic orchestrating workflows: sync all funds, compute analytics, backfill pipelines. No HTTP or DB details.
 
-**domain/services/** — Core domain logic like analytics calculations.
-
 **infra/** — Infrastructure: Postgres via Drizzle, Redis, external API clients, rate limiter, repository implementations.
 
 **interfaces/http/** — Delivery layer: Express routes, request/response mapping, no business logic.
