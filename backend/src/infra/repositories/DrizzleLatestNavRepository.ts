@@ -2,7 +2,7 @@ import { db } from "../db";
 import { fundLatestNav } from "../db/schema";
 
 function toPgDate(d: Date): string {
-  return d.toISOString().slice(0, 10); // YYYY-MM-DD
+  return d.toISOString().slice(0, 10);
 }
 
 export class DrizzleLatestNavRepository {
@@ -13,13 +13,13 @@ export class DrizzleLatestNavRepository {
       .insert(fundLatestNav)
       .values({
         fundCode,
-        date: pgDate,   // ✅ FIX HERE
+        date: pgDate, 
         nav,
       })
       .onConflictDoUpdate({
         target: fundLatestNav.fundCode,
         set: {
-          date: pgDate, // ✅ FIX HERE TOO
+          date: pgDate,
           nav,
           updatedAt: new Date(),
         },

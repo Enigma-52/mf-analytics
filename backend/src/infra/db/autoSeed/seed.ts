@@ -2,7 +2,6 @@ import { db } from "../index";
 import { funds } from "../schema";
 
 const SEED_FUNDS = [
-  // Mid Cap Direct Growth
   {
     code: "118989",
     name: "HDFC Mid Cap Fund - Growth Option - Direct Plan",
@@ -33,8 +32,6 @@ const SEED_FUNDS = [
     amc: "Kotak",
     category: "Mid Cap Direct Growth",
   },
-
-  // Small Cap Direct Growth
   {
     code: "120591",
     name: "ICICI Prudential Smallcap Fund - Direct Plan - Growth",

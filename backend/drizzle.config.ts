@@ -10,6 +10,6 @@ export default {
     user: process.env.PG_USER!,
     password: process.env.PG_PASSWORD!,
     database: process.env.PG_DATABASE!,
-    ssl: false,   // 👈 ADD THIS
+    ssl: false, 
   },
 } satisfies Config;

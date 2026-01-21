@@ -31,7 +31,6 @@ describe("Analytics correctness", () => {
   it("computes correct CAGR and zero drawdown for monotonic series", async () => {
     const fundCode = "TEST1";
 
-    // 100 → 121 over 2 years ≈ 10% CAGR
     const rows = [];
     let nav = 100;
 

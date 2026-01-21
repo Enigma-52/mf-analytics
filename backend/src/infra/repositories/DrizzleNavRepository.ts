@@ -5,7 +5,7 @@ import { NavPoint } from "../../application/ports/MfApiClient";
 import { eq, asc } from "drizzle-orm";
 
 function toPgDate(d: Date): string {
-  return d.toISOString().slice(0, 10); // YYYY-MM-DD
+  return d.toISOString().slice(0, 10);
 }
 
 export class DrizzleNavRepository implements NavRepository {
@@ -14,7 +14,7 @@ export class DrizzleNavRepository implements NavRepository {
 
     const values = rows.map((r) => ({
       fundCode,
-      date: toPgDate(r.date),   // ✅ convert
+      date: toPgDate(r.date),   
       nav: r.nav,
     }));
 

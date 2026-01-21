@@ -12,7 +12,7 @@ describe("RedisRateLimiter", () => {
       redis,
       { perSecond: 2, perMinute: 100, perHour: 100 },
       "test",
-      true // testMode
+      true 
     );
     await limiter.init();
 
@@ -20,7 +20,7 @@ describe("RedisRateLimiter", () => {
     await limiter.acquire(1);
 
     const start = Date.now();
-    await limiter.acquire(1); // should wait
+    await limiter.acquire(1);
     const elapsed = Date.now() - start;
 
     expect(elapsed).toBeGreaterThan(0);
@@ -31,7 +31,7 @@ describe("RedisRateLimiter", () => {
     redis,
     { perSecond: 2, perMinute: 100, perHour: 100 },
     "test",
-    true // testMode
+    true 
   );
   await limiter1.init();
 

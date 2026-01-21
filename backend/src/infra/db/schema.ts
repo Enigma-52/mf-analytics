@@ -23,7 +23,7 @@ export const navHistory = pgTable(
   {
     fundCode: text("fund_code").notNull(),
     date: date("date").notNull(),
-    nav: numeric("nav", { precision: 20, scale: 5 }).notNull(),  // ✅ FIXED
+    nav: numeric("nav", { precision: 20, scale: 5 }).notNull(), 
     createdAt: timestamp("created_at").defaultNow().notNull(),
   },
   (t) => ({

@@ -46,9 +46,9 @@ export class DrizzleAnalyticsRepository {
 
         dataStartDate: toPgDate(row.dataStartDate),
         dataEndDate: toPgDate(row.dataEndDate),
-        navPoints: row.navPoints.toString(),   // ✅ FIX
+        navPoints: row.navPoints.toString(),   
 
-        computedAt: new Date(), // timestamp is OK
+        computedAt: new Date(), 
       })
       .onConflictDoUpdate({
         target: [fundAnalytics.fundCode, fundAnalytics.window],
@@ -67,7 +67,7 @@ export class DrizzleAnalyticsRepository {
 
           dataStartDate: toPgDate(row.dataStartDate),
           dataEndDate: toPgDate(row.dataEndDate),
-          navPoints: row.navPoints.toString(),  // ✅ FIX
+          navPoints: row.navPoints.toString(),  
 
           computedAt: new Date(),
         },

@@ -16,7 +16,7 @@ export class RedisRateLimiter implements RateLimiter {
     private redis: Redis,
     private limits: Limits,
     private keyPrefix = "rl",
-    private testMode = false // 👈 ADD THIS
+    private testMode = false 
   ) {}
 
   async init(): Promise<void> {
@@ -55,8 +55,6 @@ export class RedisRateLimiter implements RateLimiter {
     const [allowed, retryAfterMs] = raw as unknown as [number, number];
 
     if (allowed === 1) {
-        // Optional: debug success
-        // console.log(`[RateLimiter] ACQUIRED token`);
         return;
     }
 

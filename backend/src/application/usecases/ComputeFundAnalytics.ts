@@ -136,8 +136,6 @@ export class ComputeFundAnalytics {
     const cagrMax = cagr[cagr.length - 1];
     const cagrMedian = median(cagr);
 
-    /* ================= FINAL SAFETY CHECK ================= */
-
     const all = [
       rollingMin, rollingMax, rollingMedian, rollingP25, rollingP75,
       maxDrawdown,
@@ -148,8 +146,6 @@ export class ComputeFundAnalytics {
       console.warn(`Skipping ${fundCode} ${windowName}: invalid aggregate detected`);
       return;
     }
-
-    /* ================= WRITE TO DB ================= */
 
     await this.analyticsRepo.upsert({
       fundCode,

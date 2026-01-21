@@ -1,5 +1,5 @@
 import { MfApiClient, NavPoint } from "../../application/ports/MfApiClient";
-import { RateLimiter } from "../../application/ports/RateLimiter"; // ✅ ADD THIS
+import { RateLimiter } from "../../application/ports/RateLimiter"; 
 
 export class MfApiHttpClient implements MfApiClient {
   private baseUrl = "https://api.mfapi.in";
@@ -7,7 +7,7 @@ export class MfApiHttpClient implements MfApiClient {
   constructor(private limiter: RateLimiter) {}
 
   async fetchFullHistory(schemeCode: string): Promise<NavPoint[]> {
-    await this.limiter.acquire(1); // 👈 ENFORCE QUOTA
+    await this.limiter.acquire(1); 
 
     const res = await fetch(`${this.baseUrl}/mf/${schemeCode}`);
 

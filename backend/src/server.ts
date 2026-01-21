@@ -5,7 +5,7 @@ import { autoSeedIfNeeded } from "./infra/db/autoSeed";
 
 async function main() {
   
-  await autoSeedIfNeeded();   // 👈 add this before starting server
+  await autoSeedIfNeeded();  
 
   const app = await createApp();
   app.listen(config.app.port, () => {

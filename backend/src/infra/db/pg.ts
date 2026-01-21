@@ -7,7 +7,7 @@ export const pg = new Pool({
   user: config.pg.user,
   password: config.pg.password,
   database: config.pg.database,
-  ssl: false,   // 👈 ADD THIS
+  ssl: false,   
 
   max: 10,
   idleTimeoutMillis: 30000,

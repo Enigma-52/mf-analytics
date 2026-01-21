@@ -28,7 +28,6 @@ describe("Pipeline resumability", () => {
   it("resumes from last synced date without duplicating", async () => {
     const fundCode = "118989";
 
-    // Fake existing data
     await db.insert(navHistory).values({
       fundCode,
       date: "2020-01-01",
