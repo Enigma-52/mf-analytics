@@ -25,11 +25,6 @@ src/
     redis/
       index.ts             # Redis client
     repositories/          # DB implementations
-      DrizzleAnalyticsRepository.ts
-      DrizzleFundRepository.ts
-      DrizzleNavRepository.ts
-      DrizzleLatestNavRepository.ts
-      DrizzleSyncStateRepository.ts
   interfaces/http/
     MfApiHttpClient.ts     # HTTP adapter for external API
     routes.ts              # Express routes
