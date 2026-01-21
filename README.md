@@ -104,6 +104,9 @@ npm test
 docker compose down -v
 ```
 
+![AF790D64-8DBA-4732-B864-C98CC3CC66F6_4_5005_c](https://github.com/user-attachments/assets/a505f698-fda1-4a26-a784-ac0f8b1d5233)
+
+
 ## Main APIs
 
 - `GET /funds`
