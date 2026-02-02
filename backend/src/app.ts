@@ -6,6 +6,8 @@ export async function createApp() {
   const app = express();
   app.use(express.json());
 
+  const p = 5;
+
   registerRoutes(app);
 
   return app;
