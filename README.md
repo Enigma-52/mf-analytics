@@ -1,8 +1,13 @@
 # Mutual Fund Analytics Assignment
 
+
 Backend system that ingests mutual fund NAV time-series data from external APIs, stores it in a relational database, precomputes analytics (rolling returns, drawdowns, CAGR), and serves fast (<200ms) APIs for listing, analytics, and rankings with Redis-based rate limiting and resumable idempotent backfill pipelines.
 
 ## Project Structure
+
+
+ADD line 2
+
 
 ```
 src/
